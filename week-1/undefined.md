@@ -36,4 +36,11 @@ visual studio code terminal에서 \[npm init -y]
 
 
 
-.gitignore - git에 업로드 되지 않아야 하는 파일
+\*.gitignore 파일 만들기
+
+* git에 업로드 되지 않아야 하는 파일
+* node\_modules, dist 는 있어야 됨
+
+\[touch .gitignore]
+
+[https://github.com/github/gitignore/blob/main/Node.gitignore](https://github.com/github/gitignore/blob/main/Node.gitignore)
