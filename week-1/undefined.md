@@ -44,3 +44,26 @@ visual studio code terminal에서 \[npm init -y]
 \[touch .gitignore]
 
 [https://github.com/github/gitignore/blob/main/Node.gitignore](https://github.com/github/gitignore/blob/main/Node.gitignore)
+
+
+
+TypeScript 설치
+
+\[npm i -D typescript]
+
+\[npx tsc --init]
+
+tsconfig.json 생김
+
+jsx 찾아서 주석 지우고 아래처럼
+
+```jsonc
+"jsx": "preserve",
+```
+
+
+
+ESLint 설치
+
+
+
