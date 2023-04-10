@@ -28,11 +28,11 @@ install visual studio code
 
 
 
-npm 패키지 - Node.js의 패키지를 관리할 수 있는 도구
+\*npm패키지 사용할 수 있게
+
+* Node.js의 패키지를 관리할 수 있는 도구
 
 visual studio code terminal에서 \[npm init -y]
-
-
 
 
 
