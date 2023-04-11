@@ -47,7 +47,7 @@ visual studio code terminal에서 \[npm init -y]
 
 
 
-TypeScript 설치
+☑️ TypeScript 설치
 
 \[npm i -D typescript]
 
@@ -80,6 +80,18 @@ browser: true,
 es2021: true,
 jest: true #추가
 ```
+
+
+
+테스팅 도구 설치
+
+* jest와 swc를 같이 쓰는 것이 목표
+
+\[npm i -D jest @types/jest @swc/core @swc/jest\
+jest-environment-jsdom\
+@testing-library/react @testing-library/jest-dom]
+
+swc로 빌드해야 돼서 \[touch jest.config.js]
 
 
 
