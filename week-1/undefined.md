@@ -65,5 +65,23 @@ jsx 찾아서 주석 지우고 아래처럼
 
 ESLint 설치
 
+* JS는 동적분석이기에 코드를 실행해야 오류를 알 수 있음 따라서 정적분석도구 ESLint 사용
+
+\[npm i -D eslint]
+
+\[npx eslint --init]
+
+세부 설정 하고
+
+.eslintrc.js 수정
+
+```javascript
+browser: true,
+es2021: true,
+jest: true #추가
+```
+
+
+
 
 
