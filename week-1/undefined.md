@@ -83,7 +83,7 @@ jest: true #추가
 
 
 
-테스팅 도구 설치
+☑️ 테스팅 도구 설치
 
 * jest와 swc를 같이 쓰는 것이 목표
 
@@ -92,6 +92,14 @@ jest-environment-jsdom\
 @testing-library/react @testing-library/jest-dom]
 
 swc로 빌드해야 돼서 \[touch jest.config.js]
+
+```javascript
+'./jest.setup' #안씀 삭제
+```
+
+만약에빨간줄생기면??
+
+\[npx eslint --fix .] 로 고칠 수 있음
 
 
 
