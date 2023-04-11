@@ -93,6 +93,8 @@ jest-environment-jsdom\
 
 swc로 빌드해야 돼서 \[touch jest.config.js]
 
+[https://github.com/ahastudio/CodingLife/blob/main/20220726/react/jest.config.js](https://github.com/ahastudio/CodingLife/blob/main/20220726/react/jest.config.js) 복붙
+
 ```javascript
 './jest.setup' #안씀 삭제
 ```
@@ -100,6 +102,12 @@ swc로 빌드해야 돼서 \[touch jest.config.js]
 만약에빨간줄생기면??
 
 \[npx eslint --fix .] 로 고칠 수 있음
+
+
+
+☑️ install parcel
+
+\[npm i -D parcel]
 
 
 
