@@ -4,7 +4,9 @@
 
 install Node.js
 
-terminal에서 \[brew install node]&#x20;
+```
+brew install node #terminal에서
+```
 
 version 확인 \[node -v] (v19.8.1)
 
