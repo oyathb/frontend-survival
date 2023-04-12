@@ -2,7 +2,7 @@
 
 ## JavaScript
 
-🔲 install Node.js
+🔳 install Node.js
 
 > JavaScript로
 >
@@ -37,9 +37,11 @@ node -v
 
 ## TypeScript
 
-install visual studio code
+🔳 install visual studio code
 
-\[brew install visual-studio-code]
+```
+brew install visual-studio-code
+```
 
 
 
