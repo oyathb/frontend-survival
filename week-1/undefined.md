@@ -1,8 +1,8 @@
-# 개발 환경 세팅
+# Development Environment
 
 ## JavaScript
 
-☑️ install Node.js
+🔲 install Node.js
 
 > JavaScript로
 >
@@ -18,7 +18,7 @@ Node.js를 쓰는 이유?
 * NPM - Node.js 관련 패키지를 관리하는 툴 - 사용하려는 대부분의 모듈이 등록되어 있음
 
 ```
-brew install node #terminal에서
+brew install node #mac terminal에서
 ```
 
 version 확인 ( v19.8.1)
