@@ -29,7 +29,7 @@ node -v
 
 
 
-install fnm
+🔲 install fnm
 
 \[brew install fnm]
 
