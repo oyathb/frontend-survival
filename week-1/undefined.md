@@ -31,7 +31,7 @@ node -v
 
 🔳 install fnm
 
-> Fast and simple Node.js version manager, built in Rust
+> Fast and simple _Node.js version manager_, built in Rust
 
 ```
 brew install fnm
@@ -71,7 +71,7 @@ npm init -y
 
 🔳 .gitignore 파일 생성
 
-git에 업로드 되지 않아야 하는 파일
+**git에 업로드 되지 않아야 하는 파일**
 
 node\_modules, dist 는 있어야 됨
 
@@ -108,6 +108,14 @@ jsx 찾아서 주석 지우고 아래처럼
 "jsx": "preserve",
 ```
 
+jsx
+
+> JavaScript 코드 안에서 UI 관련 작업을 할 때 시각적으로 더 도움이 되는 JS 확장 문법
+
+🔗 참고
+
+{% embed url="https://ko.reactjs.org/docs/introducing-jsx.html" %}
+
 
 
 🔳 ESLint 설치
@@ -135,33 +143,82 @@ jest: true #추가
 
 
 
-☑️ 테스팅 도구 설치
+🔳 테스팅 도구 설치
 
-* jest와 swc를 같이 쓰는 것이 목표
-
-\[npm i -D jest @types/jest @swc/core @swc/jest\
-jest-environment-jsdom\
-@testing-library/react @testing-library/jest-dom]
-
-swc로 빌드해야 돼서 \[touch jest.config.js]
-
-[https://github.com/ahastudio/CodingLife/blob/main/20220726/react/jest.config.js](https://github.com/ahastudio/CodingLife/blob/main/20220726/react/jest.config.js) 복붙
-
-```javascript
-'./jest.setup' #안씀 삭제
+```
+npm i -D jest @types/jest @swc/core @swc/jest
+jest-environment-jsdom
+@testing-library/react @testing-library/jest-dom
 ```
 
-만약에빨간줄생기면??
+jest와 swc를 같이 쓰는 것이 목표라는 것을 기억해 두자
 
-\[npx eslint --fix .] 로 고칠 수 있음
+🔗 참고
+
+{% embed url="https://swc.rs/docs/usage/jest" %}
+
+> To make your Jest tests run faster, you can swap out the default JavaScript-based runner (`ts-jest`) for a [drop-in Rust replacement(opens in a new tab)](https://github.com/swc-project/jest) using SWC.
+
+swc로 빌드하기 위해 jest.config.js 파일 생성
+
+```
+touch jest.config.js
+```
+
+{% embed url="https://github.com/ahastudio/CodingLife/blob/main/20220726/react/jest.config.js" %}
+복붙
+{% endembed %}
+
+```javascript
+// 안쓰는거삭제
+'./jest.setup'
+```
+
+만약에<mark style="color:red;">빨간줄</mark>생기면??
+
+```
+npx eslint --fix .
+```
 
 
 
-☑️ install parcel
+🔳 install parcel
 
-\[npm i -D parcel]
+> 불꽃 튀게 빠르고 설정이 필요 없는 웹 애플리케이션 번들러(의존성이 있는 모듈을 묶어줌)
+
+```
+npm i -D parcel
+```
+
+🔗 참고
+
+{% embed url="https://ko.parceljs.org/typeScript.html" %}
+
+🔳 package.json 파일 수정
+
+{% embed url="https://github.com/ahastudio/CodingLife/blob/main/20220726/react/package.json" %}
+
+```
+"scripts": {
+    "start": "parcel --port 8080",
+    "build": "parcel build",
+    "check": "tsc --noEmit",
+    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
+    "test": "jest",
+    "coverage": "jest --coverage --coverage-reporters html",
+    "watch:test": "jest --watchAll"
+  },
+```
+
+<mark style="color:red;">**나의 경우 여기에서 꼭 package.json 파일 save 해야 됐음**</mark>
+
+안 그러면 Missing script: "start" 에러 뜸
 
 
 
-
+````
+// Some code```json
+"main": "index.js",
+```
+````
 
