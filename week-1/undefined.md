@@ -2,13 +2,30 @@
 
 ## JavaScript
 
-install Node.js
+☑️ install Node.js
+
+> JavaScript로
+>
+> 브라우저 밖에서
+>
+> [서버](https://namu.wiki/w/%EC%84%9C%EB%B2%84)를 구축하는 등의 코드를 실행할 수 있게 해주는 런타임 환경
+
+Node.js를 쓰는 이유?
+
+* JS
+* asynchronous I/O - 하나의 이벤트가 완료되지 않아도 다음 이벤트를 처리할 수 있는 방식
+  * 대용량의 I/O를 처리해야 하는 서비스에 적합
+* NPM - Node.js 관련 패키지를 관리하는 툴 - 사용하려는 대부분의 모듈이 등록되어 있음
 
 ```
 brew install node #terminal에서
 ```
 
-version 확인 \[node -v] (v19.8.1)
+version 확인 ( v19.8.1)
+
+```
+node -v
+```
 
 
 
