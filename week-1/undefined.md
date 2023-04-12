@@ -10,16 +10,16 @@
 >
 > [서버](https://namu.wiki/w/%EC%84%9C%EB%B2%84)를 구축하는 등의 코드를 실행할 수 있게 해주는 런타임 환경
 
-Node.js를 쓰는 이유?
+Node.js 쓰는 이유?
 
 * JS
 * asynchronous I/O - 하나의 이벤트가 완료되지 않아도 다음 이벤트를 처리할 수 있는 방식
   * 대용량의 I/O를 처리해야 하는 서비스에 적합
 * NPM - Node.js 관련 패키지를 관리하는 툴 - 사용하려는 대부분의 모듈이 등록되어 있음
 
-```
-brew install node #mac terminal에서
-```
+<pre><code><strong>// mac terminal에서
+</strong><strong>brew install node
+</strong></code></pre>
 
 version 확인 ( v19.8.1)
 
@@ -29,9 +29,13 @@ node -v
 
 
 
-🔲 install fnm
+🔳 install fnm
 
-\[brew install fnm]
+> Fast and simple Node.js version manager, built in Rust
+
+```
+brew install fnm
+```
 
 
 
@@ -45,30 +49,43 @@ brew install visual-studio-code
 
 
 
-작업 폴더 만들기
+🔳 작업 폴더 생성
+
+```
+mkdir my-app
+cd my-app
+```
 
 
 
-\*npm패키지 사용할 수 있게
+🔳 npm 패키지
 
-* Node.js의 패키지를 관리할 수 있는 도구
+Node.js 관련 패키지를 관리할 수 있는 툴
 
-visual studio code terminal에서 \[npm init -y]
-
-
-
-\*.gitignore 파일 만들기
-
-* git에 업로드 되지 않아야 하는 파일
-* node\_modules, dist 는 있어야 됨
-
-\[touch .gitignore]
-
-[https://github.com/github/gitignore/blob/main/Node.gitignore](https://github.com/github/gitignore/blob/main/Node.gitignore)
+```
+// vsc terminal에서
+npm init -y
+```
 
 
 
-☑️ TypeScript 설치
+🔳 .gitignore 파일 생성
+
+git에 업로드 되지 않아야 하는 파일
+
+node\_modules, dist 는 있어야 됨
+
+```
+touch .gitignore
+```
+
+{% embed url="https://github.com/github/gitignore/blob/main/Node.gitignore" %}
+복붙
+{% endembed %}
+
+
+
+🔳 install TypeScript
 
 \[npm i -D typescript]
 
