@@ -186,6 +186,8 @@ npx eslint --fix .
 
 > 불꽃 튀게 빠르고 설정이 필요 없는 웹 애플리케이션 번들러(의존성이 있는 모듈을 묶어줌)
 
+index.html 파일의 변화를 자동으로 반영해줌
+
 ```
 npm i -D parcel
 ```
@@ -193,6 +195,8 @@ npm i -D parcel
 🔗 참고
 
 {% embed url="https://ko.parceljs.org/typeScript.html" %}
+
+
 
 🔳 package.json 파일 수정
 
@@ -210,9 +214,12 @@ npm i -D parcel
   },
 ```
 
-<mark style="color:red;">**나의 경우 여기에서 꼭 package.json 파일 save 해야 됐음**</mark>
 
-안 그러면 Missing script: "start" 에러 뜸
+
+```
+// Some code
+touch index.html
+```
 
 
 
@@ -220,5 +227,65 @@ npm i -D parcel
 // Some code```json
 "main": "index.js",
 ```
+"source": "index.html",
 ````
 
+
+
+```
+// index.html
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta charset = "UTF-8">
+        <title>react demo app</title>
+    </head>
+    <body>
+        <p>hello world</p>
+    </body>
+</html>
+```
+
+```
+// Some code
+mkdir src
+touch src/main.tsx
+```
+
+
+
+## ERROR
+
+코딩 중 뜬 에러들
+
+
+
+🔘 **save 잊지 말자**
+
+package.json 파일 수정하고 save 안 하니까
+
+Missing script: "start" 에러 뜸
+
+
+
+🔘 npm run start 하는데 갑자기 Error: Port "8080" could not be used 뜸
+
+서치해 보니 다른 프로세스나 프로그램이 port를 점유하고 있기 때문이라 함 (갑자기?)
+
+해결법
+
+```
+lsof -i tcp:8080
+// lsof : Mac에서 사용 중인 port 찾는 명령어
+```
+
+COMMAND PID USER 등이 순서대로 뜨는데
+
+```
+// kill -9 명령어로 해당 프로세스 종료
+sudo kill -9 [PID숫자]
+```
+
+
+
+&#x20;
