@@ -1,3 +1,7 @@
+---
+description: 강의 자료와 같이 순서대로 진행하면 개발 환경 세팅 되게
+---
+
 # Development Environment
 
 ## JavaScript
@@ -15,17 +19,22 @@ Node.js 쓰는 이유?
 * JS
 * asynchronous I/O - 하나의 이벤트가 완료되지 않아도 다음 이벤트를 처리할 수 있는 방식
   * 대용량의 I/O를 처리해야 하는 서비스에 적합
-* NPM - Node.js 관련 패키지를 관리하는 툴 - 사용하려는 대부분의 모듈이 등록되어 있음
+* NPM
+  * Node.js 관련 패키지를 관리하는 툴
+  * 사용하려는 대부분의 모듈이 등록되어 있음
 
-<pre><code><strong>// mac terminal에서
-</strong><strong>brew install node
-</strong></code></pre>
+```
+// mac terminal에서
+brew install node
+```
 
-version 확인 ( v19.8.1)
+version 확인
 
 ```
 node -v
 ```
+
+23.04.11 기준 v19.8.1
 
 
 
@@ -49,7 +58,7 @@ brew install visual-studio-code
 
 
 
-🔳 작업 폴더 생성
+### 🔳 작업 폴더 생성
 
 ```
 mkdir my-app
@@ -58,7 +67,7 @@ cd my-app
 
 
 
-🔳 npm 패키지
+### 🔳 npm 패키지
 
 Node.js 관련 패키지를 관리할 수 있는 툴 (설치 삭제 업데이트 등)
 
@@ -78,9 +87,9 @@ npm init -y
 touch .gitignore
 ```
 
+🔗 복붙 (Raw 클릭하면 더 편함)
+
 {% embed url="https://github.com/github/gitignore/blob/main/Node.gitignore" %}
-복붙
-{% endembed %}
 
 
 
@@ -90,7 +99,7 @@ touch .gitignore
 npm i -D typescript
 ```
 
-tsconfig.json 파일 생성
+tsconfig.json 생성
 
 ```
 npx tsc --init
@@ -106,9 +115,9 @@ npx tsc --init
 * npm의 일부분으로 패키지를 디렉토리에 설치하지 않고 실행
 * npm으로 run하는 것보다 빠르고 메모리도 덜 먹음
 
-tsconfig.json 파일 수정
+tsconfig.json 수정
 
-jsx 찾아서 주석 지우고 아래처럼
+jsx 찾아서 주석 삭제
 
 ```jsonc
 "jsx": "preserve",
@@ -124,7 +133,7 @@ jsx 찾아서 주석 지우고 아래처럼
 
 
 
-### 🔳 ESLint 설치
+### 🔳 install ESLint
 
 JS는 동적분석이기에 코드를 실행해야 오류를 알 수 있음 따라서 정적분석도구 ESLint 사용
 
@@ -144,7 +153,7 @@ npx eslint --init
 // 
 browser: true,
 es2021: true,
-jest: true #추가
+jest: true //추가. jest 설치 전이지만 미리 설정
 ```
 
 
@@ -159,24 +168,33 @@ jest-environment-jsdom
 
 jest와 swc를 같이 쓰는 것이 목표라는 것을 기억해 두자
 
+#### @swc/core
+
+🔗 참고
+
+{% embed url="https://www.npmjs.com/package/@swc/core" %}
+
+#### @swc/jest
+
+> To make your Jest tests run faster, you can swap out the default JavaScript-based runner (`ts-jest`) for a [drop-in Rust replacement(opens in a new tab)](https://github.com/swc-project/jest) using SWC.
+
 🔗 참고
 
 {% embed url="https://swc.rs/docs/usage/jest" %}
 
-> To make your Jest tests run faster, you can swap out the default JavaScript-based runner (`ts-jest`) for a [drop-in Rust replacement(opens in a new tab)](https://github.com/swc-project/jest) using SWC.
-
-swc로 빌드하기 위해 jest.config.js 파일 생성
+swc로 빌드하기 위해 jest.config.js 생성
 
 ```
 touch jest.config.js
 ```
 
+🔗 복붙
+
 {% embed url="https://github.com/ahastudio/CodingLife/blob/main/20220726/react/jest.config.js" %}
-복붙
-{% endembed %}
+
+안쓰는거삭제
 
 ```javascript
-// 안쓰는거삭제
 './jest.setup'
 ```
 
@@ -188,11 +206,11 @@ npx eslint --fix .
 
 
 
-🔳 install parcel
+### 🔳 install parcel
 
 > 불꽃 튀게 빠르고 설정이 필요 없는 웹 애플리케이션 번들러(의존성이 있는 모듈을 묶어줌)
 
-index.html 파일의 변화를 자동으로 반영해줌
+index.html 파일의 변화를 자동으로 반영
 
 ```
 npm i -D parcel
@@ -204,9 +222,7 @@ npm i -D parcel
 
 
 
-### 🔳 package.json 파일 수정
-
-{% embed url="https://github.com/ahastudio/CodingLife/blob/main/20220726/react/package.json" %}
+### 🔳 package.json 수정
 
 ```
 "scripts": {
@@ -220,36 +236,43 @@ npm i -D parcel
   },
 ```
 
+🔗 복붙
+
+{% embed url="https://github.com/ahastudio/CodingLife/blob/main/20220726/react/package.json" %}
+
+<mark style="color:red;">빨간줄</mark>수정하는다른방법
+
+\--fix가 lint 안에 있어서 npx eslint --fix 하지 않아도&#x20;
+
 ```
-// --fix가 lint 안에 있어서 npx eslint --fix 하지 않아도
 npm run lint
-// 로 빨간줄 수정 가능
 ```
+
+로 가능
 
 
 
 ### 여기까지 개발 환경 세팅 완료
 
-port 8080 열어 보기
+### 🔳 port 8080 열어 보기
+
+index.html 생성
 
 ```
-// index.html 파일 생성
 touch index.html
 ```
 
+package.json 수정
 
-
-````
-// Some code```json
+```
 "main": "index.js",
-```
+⬇️
 "source": "index.html",
-````
+```
 
-
+index.html
 
 ```
-// index.html
 <!DOCTYPE html>
 <html lang = "ko">
     <head>
@@ -260,12 +283,6 @@ touch index.html
         <p>hello world</p>
     </body>
 </html>
-```
-
-```
-// Some code
-mkdir src
-touch src/main.tsx
 ```
 
 
