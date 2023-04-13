@@ -198,7 +198,7 @@ npm i -D parcel
 
 
 
-🔳 package.json 파일 수정
+### 🔳 package.json 파일 수정
 
 {% embed url="https://github.com/ahastudio/CodingLife/blob/main/20220726/react/package.json" %}
 
@@ -214,10 +214,20 @@ npm i -D parcel
   },
 ```
 
+```
+// --fix가 lint 안에 있어서 npx eslint --fix 하지 않아도
+npm run lint
+// 로 빨간줄 수정 가능
+```
 
+
+
+### 여기까지 개발 환경 세팅 완료
+
+port 8080 열어 보기
 
 ```
-// Some code
+// index.html 파일 생성
 touch index.html
 ```
 
@@ -256,11 +266,11 @@ touch src/main.tsx
 
 ## ERROR
 
-코딩 중 뜬 에러들
+코딩 중 뜬 에러
 
 
 
-🔘 **save 잊지 말자**
+▪️ **save 수시로**
 
 package.json 파일 수정하고 save 안 하니까
 
@@ -268,7 +278,7 @@ Missing script: "start" 에러 뜸
 
 
 
-🔘 npm run start 하는데 갑자기 Error: Port "8080" could not be used 뜸
+▪️ npm run start 하는데 갑자기 Error: Port "8080" could not be used 뜸
 
 서치해 보니 다른 프로세스나 프로그램이 port를 점유하고 있기 때문이라 함 (갑자기?)
 
