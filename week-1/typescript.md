@@ -2,7 +2,7 @@
 
 ### 🔳 what is TypeScript?
 
-Microsoft가 개발한 JS의 상위 언어
+* Microsoft가 개발한 JS의 상위 언어
 
 정적 타입을 명시할 수 있는 것이 JS와의 차이점
 

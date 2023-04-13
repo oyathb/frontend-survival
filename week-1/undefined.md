@@ -69,11 +69,10 @@ npm init -y
 
 
 
-🔳 .gitignore 파일 생성
+### 🔳 .gitignore 파일 생성
 
-**git에 업로드 되지 않아야 하는 파일**
-
-node\_modules, dist 는 있어야 됨
+* **git에 업로드 되지 않아야 하는 파일**
+* 최소 node\_modules, dist 는 있어야 됨
 
 ```
 touch .gitignore
@@ -115,13 +114,13 @@ jsx 찾아서 주석 지우고 아래처럼
 "jsx": "preserve",
 ```
 
-#### JSX
-
-> JavaScript 코드 안에서 UI 관련 작업을 할 때 시각적으로 더 도움이 되는 JS 확장 문법
-
-🔗 참고
+#### JSX (JavsScript eXtension)
 
 {% embed url="https://ko.reactjs.org/docs/introducing-jsx.html" %}
+
+* React에서 HTML을 표현할 때 사용하는 JS 확장 문법
+  * JS 코드로 HTML을 표현할 수 있음
+* JavaScript 코드 안에서 UI 관련 작업을 할 때 시각적으로 더 도움이 됨&#x20;
 
 
 
@@ -150,7 +149,7 @@ jest: true #추가
 
 
 
-🔳 테스팅 도구 설치
+### 🔳 테스팅 도구 설치
 
 ```
 npm i -D jest @types/jest @swc/core @swc/jest
