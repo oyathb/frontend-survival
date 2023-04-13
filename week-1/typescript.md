@@ -1,16 +1,16 @@
 # TypeScript
 
-🔲 What is TypeScript?
+### 🔳 what is TypeScript?
 
 Microsoft가 개발한 JS의 상위 언어
 
 정적 타입을 명시할 수 있는 것이 JS와의 차이점
 
-2023년 3월 PyPL 인기 프로그래밍 랭킹 언어 8위 ..
+2023년 3월 PyPL 인기 프로그래밍 랭킹 언어 8위
 
 
 
-왜 쓰는가?
+#### 왜 쓰는가?
 
 객체지향 프로그래밍 가능
 

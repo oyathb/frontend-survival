@@ -2,7 +2,7 @@
 
 ## JavaScript
 
-🔳 install Node.js
+### 🔳 install Node.js
 
 > JavaScript로
 >
@@ -29,7 +29,7 @@ node -v
 
 
 
-🔳 install fnm
+### 🔳 install fnm
 
 > Fast and simple _Node.js version manager_, built in Rust
 
@@ -41,7 +41,7 @@ brew install fnm
 
 ## TypeScript
 
-🔳 install visual studio code
+### 🔳 install visual studio code
 
 ```
 brew install visual-studio-code
@@ -85,16 +85,11 @@ touch .gitignore
 
 
 
-🔳 install TypeScript
+### 🔳 install TypeScript
 
 ```
 npm i -D typescript
 ```
-
-NPX
-
-* npm의 일부분으로 패키지를 디렉토리에 설치하지 않고 실행
-* npm으로 run하는 것보다 빠르고 메모리도 덜 먹음
 
 tsconfig.json 파일 생성
 
@@ -102,13 +97,25 @@ tsconfig.json 파일 생성
 npx tsc --init
 ```
 
+#### tsconfig.json
+
+* tsconfig.json 파일이 있는 디렉토리는 TypeScript 프로젝트의 루트가 됨
+* 프로젝트를 컴파일하는 데에 필요한 루트 파일과 컴파일러 옵션 설정
+
+#### NPX
+
+* npm의 일부분으로 패키지를 디렉토리에 설치하지 않고 실행
+* npm으로 run하는 것보다 빠르고 메모리도 덜 먹음
+
+tsconfig.json 파일 수정
+
 jsx 찾아서 주석 지우고 아래처럼
 
 ```jsonc
 "jsx": "preserve",
 ```
 
-jsx
+#### JSX
 
 > JavaScript 코드 안에서 UI 관련 작업을 할 때 시각적으로 더 도움이 되는 JS 확장 문법
 
@@ -118,7 +125,7 @@ jsx
 
 
 
-🔳 ESLint 설치
+### 🔳 ESLint 설치
 
 JS는 동적분석이기에 코드를 실행해야 오류를 알 수 있음 따라서 정적분석도구 ESLint 사용
 
