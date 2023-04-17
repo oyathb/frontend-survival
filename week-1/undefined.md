@@ -287,6 +287,44 @@ index.html
 
 
 
+
+
+
+
+
+
+
+
+### asdf
+
+`main.tsx`&#x20;
+
+```typescriptreact
+console.log('HI!');
+```
+
+`index.html`
+
+```html
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta charset = "UTF-8">
+        <title>react demo app</title>
+    </head>
+    <body>
+        <p>hello world</p>
+        <script type="module" src="./src/main.tsx"></script>
+    </body>
+</html>
+```
+
+
+
+
+
+
+
 ## ERROR
 
 코딩 중 뜬 에러
