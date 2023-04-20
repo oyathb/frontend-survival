@@ -179,3 +179,20 @@ JSX를 변환한 JavaScript file
 * 왜 사용할까?
   * Real DOM으로 많은 작업을 처리하면 느리기 때문
   * 이라고 생각하지만 유지보수가 용이한 것이 진짜 장점
+
+
+
+#### 선언형 API
+
+* 애플리케이션의 각 상태에 대한 간단한 뷰만 설계하면
+* 데이터가 변경됨에 따라 적절한 컴포넌트만 효율적으로 갱신하고 렌더링
+* 즉 JSX로 구조만 설계하면 React가 Virtual DOM으로 변경된 부분을 찾아서 Real DOM을 업데이트 함
+  * JavaScript로 UI 만드는 것보다 쉬움
+
+
+
+| Imperative Programming | Declarative Programming |
+| ---------------------- | ----------------------- |
+|                        |                         |
+|                        |                         |
+|                        |                         |
