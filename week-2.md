@@ -22,9 +22,15 @@
 
 #### 💎 교재) Babel에서 변환해 보기
 
+
+
+JSX 코드
+
 ```
 <p>Hello, world!</p>
 ```
+
+변환된 JS 코드
 
 ```
 import { jsx as _jsx } from "react/jsx-runtime";
@@ -95,3 +101,4 @@ import { jsx as _jsx } from "react/jsx-runtime";
 
 <figure><img src=".gitbook/assets/react-architecture.jpeg" alt=""><figcaption><p>React Architecture</p></figcaption></figure>
 
+\[🔗 출처]\([https://jsforall.com/reactjs/how-to-create-react-app-2019-how-virtual-dom-component-work/](https://jsforall.com/reactjs/how-to-create-react-app-2019-how-virtual-dom-component-work/))
