@@ -1,6 +1,6 @@
 # week 2
 
-## asdf
+## JSX
 
 
 
@@ -120,7 +120,7 @@ React.createElement(
 
 ### React Architecture
 
-<figure><img src=".gitbook/assets/react-architecture.jpeg" alt=""><figcaption><p>React Architecture</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/react-architecture.jpeg" alt=""><figcaption><p>React Architecture</p></figcaption></figure>
 
 [🔗 이미지 출처](https://jsforall.com/reactjs/how-to-create-react-app-2019-how-virtual-dom-component-work/)
 
@@ -202,3 +202,15 @@ JSX를 변환한 JavaScript file
 #### ReactDOM
 
 * UI를 브라우저에 렌더링 할 때 사용하는 라이브러리
+
+
+
+### Reconciliation 재조정
+
+* Virtual DOM이 Real DOM과 비교하여 변경된 부분만 React DOM에 갱신하는 작업
+* React v16부터 새 알고리즘 React Fiber 적용
+
+### React StrictMode
+
+* 애플리케이션 내의 잠재적인 문제를 알아내기 위한 도구
+
