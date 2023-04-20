@@ -99,6 +99,61 @@ import { jsx as _jsx } from "react/jsx-runtime";
 
 
 
+### React.createElement
+
+* JSX는 XML/HTML 부분을 React.createElement를 써서 변환해야 한다
+  * JSX는 React.createELement의 Syntatic Sugar
+* 만약 JSX를 안 쓴다면? 그냥 내가 React.createElement 호출해서 작성하면 됨
+  * 굳이? 싶긴 한데 공식 사이트는 컴파일(트랜스파일) 설정하기 싫을 때 이렇게 하라고 함
+* 구성 요소
+  * createElement(type, props, ...children)
+
+```
+React.createElement(
+ type
+ [props]
+ [...children]
+);
+```
+
+
+
+### React Architecture
+
 <figure><img src=".gitbook/assets/react-architecture.jpeg" alt=""><figcaption><p>React Architecture</p></figcaption></figure>
 
-\[🔗 출처]\([https://jsforall.com/reactjs/how-to-create-react-app-2019-how-virtual-dom-component-work/](https://jsforall.com/reactjs/how-to-create-react-app-2019-how-virtual-dom-component-work/))
+[🔗 이미지 출처](https://jsforall.com/reactjs/how-to-create-react-app-2019-how-virtual-dom-component-work/)
+
+
+
+JSX를 변환한 JavaScript file
+
+\= React Element
+
+\= Virtual DOM Tree의 Node
+
+\= DOM의 객체
+
+라고 이해함
+
+
+
+### React Element
+
+
+
+### React Element
+
+* 리액트 앱을 구성하는 가장 작은 단위
+* 컴포넌트의 구성 요소
+* 화면에 표시할 내용을 기술
+
+### Components
+
+* UI를 재사용 가능한 개별적인 여러 조각으로 나눈 것
+* props를 입력 받고 React Element를 출력한다
+* Element ㄷ Component 개념이 어려웠는데 붕어빵 비유 보고 이해함
+  * [🔗 잘 정리된 글](https://velog.io/@sjmh0507/React-%EC%99%84%EC%A0%84-%EC%A4%91%EC%9A%94%ED%95%9C-Components%EC%99%80-Props-%EA%B0%9C%EB%85%90)
+  * Component는 붕어빵 **틀**
+  * Element는 틀로찍어낸 **붕어빵**
+  * props는 속재료 **팥 슈크림** 등등
