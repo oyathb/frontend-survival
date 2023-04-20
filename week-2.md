@@ -193,6 +193,7 @@ JSX를 변환한 JavaScript file
 
 | Imperative Programming | Declarative Programming |
 | ---------------------- | ----------------------- |
+| ㅓㄹ                     | ㅇ                       |
 |                        |                         |
 |                        |                         |
-|                        |                         |
+
