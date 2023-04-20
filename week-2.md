@@ -191,9 +191,14 @@ JSX를 변환한 JavaScript file
 
 
 
-| Imperative Programming | Declarative Programming |
-| ---------------------- | ----------------------- |
-| 절차(How)에 중점            | 무엇(What)을 원하는지에 중점      |
-| JavaScript에            |                         |
-|                        |                         |
+| Imperative Programming  | Declarative Programming       |
+| ----------------------- | ----------------------------- |
+| 절차(How)에 중점             | 무엇(What)을 원하는지에 중점            |
+| 어떤 방법으로 나타내야 하는지 일일히 기술 | 무엇을 나타내야 하는지에만 집중             |
+| JavaScript가 직접 DOM 조작   | JavaScript가 DOM 조작을 React에 위임 |
 
+
+
+#### ReactDOM
+
+* UI를 브라우저에 렌더링 할 때 사용하는 라이브러리
