@@ -42,3 +42,20 @@ component hierarchy
 
 [🔗 이미지 출처](https://www.altexsoft.com/blog/rest-api-design/)
 
+
+
+* RESOURCE에 대한 행위는 HTTP Method로 표현한다
+* HTTP Method (CRUD랑비슷)
+  * POST : 등록
+  * GET : 조회
+  * PUT : 수정
+  * DELETE : 삭제
+* client request에 포함되는 것
+  * 고유 리소스 식별자
+    * server는 고유 리소스 식별자로 각 RESOURCE 식별
+    * 일반적으로 URL 사용
+  * HTTP Method
+  * HTTP 헤더
+    * client와 server 간에 교환되는 메타데이터
+* REST API는 확장성, 유연성, 독립성에 이점이 있다
+* REST 특징은 참고 문서 보자
