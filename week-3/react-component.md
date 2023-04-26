@@ -112,7 +112,7 @@ function User_name(user) {
 * REST는 필요한 데이터를 여러 endpoints에 액세스 하여 수집하지만 (여러번요청)
 * GraphQL은 서버에 단일 요청으로 수집 가능
 
-**endpoint**
+endpoint
 
 * API가 server에서 RESOURCE에 접근할 수 있도록 하는 URL
 
