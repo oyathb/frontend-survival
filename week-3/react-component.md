@@ -98,3 +98,24 @@ function User_name(user) {
   * client가 필요한 데이터만 가져오도록 한 번에 쿼리를 보낼 수 있음
   * 선언적, 직관적
 * 강력한 개발자 도구 지원.. 개발자 친화적
+
+
+
+#### REST API vs GraphQL
+
+[🔗GraphQL is the better REST](https://www.howtographql.com/basics/1-graphql-is-the-better-rest/)
+
+* GraphQL github는 "GraphQL은 더 나은 REST" 라고 소개함
+* REST API의 한계?
+  * Under-Fetching : 필요한 데이터를 가져오려면 여러 API를 호출해야 함
+  * Over-Fetching : 나한테 필요 없는 데이터도 반환 받아야 함 = RESOURCE 낭비
+* REST는 필요한 데이터를 여러 endpoints에 액세스 하여 수집하지만 (여러번요청)
+* GraphQL은 서버에 단일 요청으로 수집 가능
+
+**endpoint**
+
+* API가 server에서 RESOURCE에 접근할 수 있도록 하는 URL
+
+<figure><img src="../.gitbook/assets/1_qpyJSVVPkd5c6ItMmivnYg.png" alt=""><figcaption></figcaption></figure>
+
+\[🔗이미지 출처 [https://www.apollographql.com/blog/graphql/basics/graphql-vs-rest/](https://www.apollographql.com/blog/graphql/basics/graphql-vs-rest/)]
