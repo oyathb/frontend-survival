@@ -59,3 +59,42 @@ component hierarchy
     * client와 server 간에 교환되는 메타데이터
 * REST API는 확장성, 유연성, 독립성에 이점이 있다
 * REST 특징은 참고 문서 보자
+
+
+
+#### GraphQL
+
+[🔗 reference) 공식 깃허브](https://graphql-kr.github.io/)
+
+* Facebook에서 만든 API를 위한 쿼리 언어
+  * 쿼리 언어 : 데이터베이스(DB) 또는 정보 시스템(IS: Information System)에 자료를 조작하고 검색하는 데 사용하는 프로그래밍 언어 체계 \[네이버 지식백과] 질의 언어 \[質疑言語, Query Language] (용어로 알아보는 우리시대 DATA)\
+    SQL같은거
+* 타입 시스템을 사용하여 쿼리를 실행하는 서버사이드 런타임
+  * 타입과 필드를 정의하고 각 타입의 필드에 대한 함수로 구현
+  * ex) 로그인한 사용자가 누구인지(me)와 해당 사용자의 이름(name)을 가져오는 GraphQL 서비스
+
+```
+type Query {
+ me: User
+}
+
+type User {
+ id: ID
+ name: String
+}
+```
+
+```
+function Query_me(request) {
+  return request.auth.user;
+}
+
+function User_name(user) {
+  return user.getName();
+}
+```
+
+* REST API는 여러 URL에서 데이터를 받아와야 하지만 GraphQL API는 **한번의 요청으로 앱에 필요한 모든 데이터를 가져옵니다.**
+  * client가 필요한 데이터만 가져오도록 한 번에 쿼리를 보낼 수 있음
+  * 선언적, 직관적
+* 강력한 개발자 도구 지원.. 개발자 친화적
