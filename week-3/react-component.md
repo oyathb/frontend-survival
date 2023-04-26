@@ -111,10 +111,8 @@ function User_name(user) {
   * Over-Fetching : 나한테 필요 없는 데이터도 반환 받아야 함 = RESOURCE 낭비
 * REST는 필요한 데이터를 여러 endpoints에 액세스 하여 수집하지만 (여러번요청)
 * GraphQL은 서버에 단일 요청으로 수집 가능
-
-endpoint
-
-* API가 server에서 RESOURCE에 접근할 수 있도록 하는 URL
+* endpoint
+  * API가 server에서 RESOURCE에 접근할 수 있도록 하는 URL
 
 <figure><img src="../.gitbook/assets/1_qpyJSVVPkd5c6ItMmivnYg.png" alt=""><figcaption></figcaption></figure>
 
