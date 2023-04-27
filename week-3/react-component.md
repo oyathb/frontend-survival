@@ -116,9 +116,7 @@ function User_name(user) {
 
 <figure><img src="../.gitbook/assets/1_qpyJSVVPkd5c6ItMmivnYg.png" alt=""><figcaption></figcaption></figure>
 
-\[🔗이미지 출처 [https://www.apollographql.com/blog/graphql/basics/graphql-vs-rest/](https://www.apollographql.com/blog/graphql/basics/graphql-vs-rest/)]
-
-
+이미지 출처 [🔗https://www.apollographql.com/blog/graphql/basics/graphql-vs-rest/](https://www.apollographql.com/blog/graphql/basics/graphql-vs-rest/)
 
 ### JSON
 
@@ -156,3 +154,29 @@ function User_name(user) {
 * 리액트는 컴포넌트 기반
 * "스스로 상태를 관리하는 캡슐화된 컴포넌트를 만드세요. 그리고 이를 조합해 복잡한 UI를 만들어보세요."
 * 좋은 컴포넌트 설계를 위한 몇 가지 리팩토링 기준이 있음
+  * SRP
+  * CSS
+  * Design's Layer
+  * Information Architecture
+
+### SRP
+
+* Single Responsibility Principle
+* 하나의 클래스는 하나의 책임만 가져야 한다
+* 하나의 클래스에 여러 책임이 있으면 결합도가 높아짐 (결합도는 낮추고 응집도는 높여야)
+* 유지보수가 편함
+
+#### Extract Function
+
+[🔗https://refactoring.com/catalog/extractFunction.html](https://refactoring.com/catalog/extractFunction.html)
+
+* SRP를 위한 수단
+* 일단 코드를 쭉 쓰다가 적절히 자를 수 있는 부분을 함수로 추출
+
+### Atomic Design
+
+* 모든 물질은 원자로 구성되어 있다는 화학적 관점에서 영감을 얻은 디자인 시스템
+  * 원자는 결합하여 분자가 되고 분자는 결합하여 더 복잡한 유기체가 됨
+* atom -> molecules -> organisms -> templates -> pages
+  * 단계 별로 추상적인 것을 구체화
+* atom : label, input, button 같은 더 이상 분해할 수 없는 기본 컴포넌트
