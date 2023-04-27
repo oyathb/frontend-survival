@@ -1,9 +1,5 @@
 # React Component
 
-## 🥒
-
-component hierarchy
-
 ### REST API 와 GraphQL
 
 #### API
@@ -180,3 +176,62 @@ function User_name(user) {
 * atom -> molecules -> organisms -> templates -> pages
   * 단계 별로 추상적인 것을 구체화
 * atom : label, input, button 같은 더 이상 분해할 수 없는 기본 컴포넌트
+
+
+
+### Props
+
+* properties의 줄임말
+* Component에 전달되는 것
+* Componenet는 props를 사용하여 서로 통신 (나눠진 컴포넌트를 연결하는 방법)
+* 저번 주에 작성한 내용..
+
+### State
+
+* Componenet 안에 있음
+* 변경을 다루기 위한 요소
+  * 지속적으로 변경되는 값을 관리하기 위해 사용
+* State 값이 변경되면 re-rendering이 발생
+  * 어떤 컴포넌트의 State 값이 바뀌면 해당 컴포넌트와 하위 컴포넌트를 re-rendering
+* setState 함수를 사용
+* 일관성과 효율을 위해 DRY 원칙을 따르는 SSOT를 만들어야 함
+
+#### DRY
+
+* Don't Repeat Yourself
+* 소프트웨어 개발 원칙
+* 정보의 중복을 줄이는 것을 목표로 함
+* 반복하지마라
+
+#### SSOT
+
+* Single Source of Truth
+* 모든 데이터 요소를 한 곳에 모아서 제어하고 수정할 수 있게 하는 것
+
+#### React State의 조건
+
+* 변경돼야 함. 변경되지 않는 건 state로 다룰 가치가 없다.
+* 부모 컴포넌트가 props를 통해 전달한다면 state가 아님.
+* 다른 state나 props를 이용해 계산 가능하다면 state가 아님.
+
+#### useState
+
+[🔗Using the State Hook](https://ko.legacy.reactjs.org/docs/hooks-state.html)
+
+* 함수형 컴포넌트에서도 State를 관리할 수 있는 React Hooks 중 하나
+* State의 초기값을 인자로 넘겨줌
+* state 변수, 해당 변수를 갱신할 수 있는 함수 이 두 가지 쌍을 반환
+
+```
+import React, { useState } from 'react';
+
+function Example() {
+  // 새로운 state 변수를 선언하고, 이것을 count라 부르겠습니다.
+  const [count, setCount] = useState(0);
+```
+
+### Lifting State Up
+
+* React의 데이터 흐름은 Top-down과 단방향
+* Lifting State Up은 하위 컴포넌트에서 상위 컴포넌트로 전달하는 개념
+* State가 변경되는 함수를 props로 하위 컴포넌트에 줌
