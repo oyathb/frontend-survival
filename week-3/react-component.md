@@ -117,3 +117,42 @@ function User_name(user) {
 <figure><img src="../.gitbook/assets/1_qpyJSVVPkd5c6ItMmivnYg.png" alt=""><figcaption></figcaption></figure>
 
 \[🔗이미지 출처 [https://www.apollographql.com/blog/graphql/basics/graphql-vs-rest/](https://www.apollographql.com/blog/graphql/basics/graphql-vs-rest/)]
+
+
+
+### JSON
+
+* JavaScript Object Notation
+* 데이터 교환 포맷
+* "키-값 쌍"으로 이루어진 데이터 오브젝트를 전달하기 위해 **인간이 읽을 수 있는 텍스트를 사용**하는 개방형 표준 포맷
+  * 인터넷에서 자료를 주고 받을 때 그 자료를 표현하는 방법
+* server에서 client로 데이터를 보낼 때 사용하는 포맷
+  * ex) client가 GraphQL server로 요청을 보내면 server는 JSON 객체로 응답
+* JavaScript 객체 문법을 따르지만 JS 아니어도 됨
+* JSON 구조는 { key : value }
+  * 문자열 숫자 부울 Null 객체 배열
+  * package.json 파일 생각하자
+* 텍스트 기반의 경량 언어이며, 추가적인 코드 작업 없이도 손쉽게 파싱이 가능한 데이터 형식
+  * 많은 데이터를 반환 및 표시해야 하는 웹 서비스의 경우 이상적인 선택
+
+### DSL
+
+* Domain-Specific Language
+* JSON 포맷으로 받은 데이터를 사용자가 볼 수 있도록 UI를 구성해야 하는데
+  * React는 HTML과 유사한 DSL을 사용하여 선언형으로 UI를 구성
+* 특정 문제를 목표로 하는 언어 (SQL같은)
+* 내부 DSL과 외부 DSL이 있음.. 자세한 내용은 [🔗https://martinfowler.com/bliki/DomainSpecificLanguage.html](https://martinfowler.com/bliki/DomainSpecificLanguage.html) 참고
+
+### 명령형/선언형 프로그래밍
+
+| Imperative Programming  | Declarative Programming       |
+| ----------------------- | ----------------------------- |
+| 절차(How)에 중점             | 무엇(What)을 원하는지에 중점            |
+| 어떤 방법으로 나타내야 하는지 일일히 기술 | 무엇을 나타내야 하는지에만 집중             |
+| JavaScript가 직접 DOM 조작   | JavaScript가 DOM 조작을 React에 위임 |
+
+### React Component
+
+* 리액트는 컴포넌트 기반
+* "스스로 상태를 관리하는 캡슐화된 컴포넌트를 만드세요. 그리고 이를 조합해 복잡한 UI를 만들어보세요."
+* 좋은 컴포넌트 설계를 위한 몇 가지 리팩토링 기준이 있음
