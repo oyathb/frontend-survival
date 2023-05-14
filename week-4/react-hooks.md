@@ -18,6 +18,37 @@
   * useEffect
   * useContext
 
+### useEffect
+
+* 컴포넌트가 랜더링 될 때마다 특정 작업을 실행할 수 있도록 하는 Hook
+* 무한루프 방지하기 위해 두 번째 매개변수로 의존성 배열 줌
+  * 한 번만 실행할 경우 빈 배열 \[]
+
+```App.tsx
+const [restaurants, setRestaurants] = useState([]);
+
+  useEffect(() => {
+    console.log('!')
+    
+    // useEffect로 한 번만 fetch
+    const fetchRestaurants = async () => {
+      const url = 'http://localhost:3000/restaurants';
+
+      const response = await fetch(url);
+
+      const data = await response.json();
+
+      // const { restaurants } = data;
+
+      setRestaurants(data.restaurants);
+
+      console.log(data.restaurants);
+    };
+
+    fetchRestaurants();
+  }, []); // 의존성배열
+```
+
 ### React StrictMode
 
 [🔗Strict 모드](https://ko.legacy.reactjs.org/docs/strict-mode.html)
