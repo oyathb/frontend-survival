@@ -23,5 +23,13 @@
 [🔗Strict 모드](https://ko.legacy.reactjs.org/docs/strict-mode.html)
 
 * 애플리케이션 내의 잠재적인 문제를 알아내기 위한 도구
-* 2번씩 됨
+* console.log() 찍으면 2번씩 나옴
 * 개발할때만작동
+
+```main.tsx
+root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+```
