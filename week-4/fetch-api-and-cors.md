@@ -2,6 +2,8 @@
 
 ### Fetch API
 
+[🔗https://ko.javascript.info/fetch](https://ko.javascript.info/fetch)
+
 [🔗Fetch 사용하기](https://developer.mozilla.org/ko/docs/Web/API/Fetch\_API/Using\_Fetch)
 
 * fetch = 가지고 오다
@@ -11,14 +13,21 @@
   * 서버 -> 클라이언트 : Response
 * fetch() 함수는 첫 번째 인자로 URL 두 번째 인자로 옵션 객체를 받고 Promise 객체를 반환한다
   * fetch(url, options)
-  * 옵션 객체에는 HTTP Method 등을 작성 가능 (자세한 내용은 Fetch 사용하기 확인)
+  * options에는 HTTP Method 등을 작성 가능 (자세한 내용은 Fetch 사용하기 확인)
+  * options에 아무것도 넘기지 않으면 요청은 GET 메서드로 진행되어 url로부터 콘텐츠가 다운로드 됨
 * 기본적인 Fetch 요청
 
 ```
-fetch(url)
-  .then((response) => response.json()) // JavaScript 객체로 변환
+fetch(url) // (1)
+  .then((response) => response.json()) // (2) JavaScript 객체로 변환. 응답을 json 형태로 파싱
   .then((data) => console.log(data));
 ```
+
+(1) fetch 호출 시 반환받은 promise가 내장 클래스 Response의 인스턴스와 함께 fulfilled(이행) 상태가 됨
+
+!! 아직 body는 도착하지 않음 !! 개발자는 헤더 보고 요청 성공 여부를 알게 됨
+
+(2) 추가 메서드를 호출해 body를 받음 (여기에서는 response.json()으로 받음)
 
 <figure><img src="../.gitbook/assets/스크린샷 2023-05-14 오후 4.32.17.png" alt=""><figcaption></figcaption></figure>
 
