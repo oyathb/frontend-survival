@@ -15,10 +15,12 @@
 * 기본적인 Fetch 요청
 
 ```
-fetch('http://localhost:3000/restaurants')
-  .then((response) => response.json())
+fetch(url)
+  .then((response) => response.json()) // response 객체가 json()을 제공. JavaScript 객체로 변환
   .then((data) => console.log(data));
 ```
+
+<figure><img src="../.gitbook/assets/스크린샷 2023-05-14 오후 4.32.17.png" alt=""><figcaption></figcaption></figure>
 
 async와 await 문법으로 Promise를 더 깔끔하게 사용할 수 있음
 
