@@ -71,3 +71,14 @@ async function main() {
   * rejected(거부) : 연산이 실패함
 
 <figure><img src="../.gitbook/assets/스크린샷 2023-05-14 오전 4.35.54.png" alt=""><figcaption></figcaption></figure>
+
+### ReadableStream
+
+* byte 데이터를 읽을 수 있는 스트림 제공
+* Fetch API는 Response 객체의 body 속성을 통하여 ReadableStream의 구체적인 인스턴스를 제공
+
+<figure><img src="../.gitbook/assets/스크린샷 2023-05-14 오후 9.32.53.png" alt=""><figcaption></figcaption></figure>
+
+getReader() : ReadableStream의 메서드. reader를 만들고 stream을 잠근다. stream이 잠겨 있는 동안 다른 reader를 얻을 수 없다
+
+read() : ReadableStreamDefaultReader의 메서드. stream 내부 대기열의 next chunk에 액세스를 제공한다
