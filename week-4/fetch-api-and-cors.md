@@ -16,7 +16,7 @@
 
 ```
 fetch(url)
-  .then((response) => response.json()) // response 객체가 json()을 제공. JavaScript 객체로 변환
+  .then((response) => response.json()) // JavaScript 객체로 변환
   .then((data) => console.log(data));
 ```
 
@@ -25,6 +25,10 @@ fetch(url)
 async와 await 문법으로 Promise를 더 깔끔하게 사용할 수 있음
 
 [🔗async와 await](https://ko.javascript.info/async-await)
+
+<figure><img src="../.gitbook/assets/스크린샷 2023-05-14 오후 4.43.37.png" alt=""><figcaption></figcaption></figure>
+
+.then().then() 이어지는 게 별로면 await 걸어주면 굳
 
 ```main.tsx
 async function main() {
