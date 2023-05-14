@@ -13,3 +13,4 @@
 * [week 4](week-4/README.md)
   * [Express](week-4/express.md)
   * [Fetch API & CORS](week-4/fetch-api-and-cors.md)
+  * [React Hooks](week-4/react-hooks.md)
