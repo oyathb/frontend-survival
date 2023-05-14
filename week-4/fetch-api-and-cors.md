@@ -25,11 +25,11 @@ fetch(url) // (1)
 
 (1) fetch 호출 시 반환받은 promise가 내장 클래스 Response의 인스턴스와 함께 fulfilled(이행) 상태가 됨
 
-!! 아직 body는 도착하지 않음 !! 개발자는 헤더 보고 요청 성공 여부를 알게 됨
+**!! 아직 body는 도착하지 않음 !!** 개발자는 헤더 보고 요청 성공 여부를 알게 됨
 
 (2) 추가 메서드를 호출해 body를 받음 (여기에서는 response.json()으로 받음)
 
-<figure><img src="../.gitbook/assets/스크린샷 2023-05-14 오후 4.32.17.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/스크린샷 2023-05-14 오후 4.32.17 (1).png" alt=""><figcaption></figcaption></figure>
 
 async와 await 문법으로 Promise를 더 깔끔하게 사용할 수 있음
 
