@@ -82,3 +82,23 @@ async function main() {
 getReader() : ReadableStream의 메서드. reader를 만들고 stream을 잠근다. stream이 잠겨 있는 동안 다른 reader를 얻을 수 없다
 
 read() : ReadableStreamDefaultReader의 메서드. stream 내부 대기열의 next chunk에 액세스를 제공한다
+
+#### Uint8Array
+
+* 플랫폼의 바이트 순서를 따르는 8비트 부호 없는 정수의 배열
+* TextDecoder를 사용하여 Uint8Array -> Unicode 변환 가능 (반대는 TextEncoder)
+
+### CORS
+
+* Cross-Origin Resource Sharing 교차 출처 리소스 공유
+* 웹 브라우저는 Same Origin Policy에 따라 내 서버 외의 다른 서버가 출처인 리소스는 차단함
+* CORS는 추가 HTTP 헤더를 사용하여, 한 출처에서 실행 중인 웹 애플리케이션이 다른 출처의 선택한 자원에 접근할 수 있는 권한을 부여하도록 브라우저에 알려주는 체제
+* 다른 출처의 리소스를 불러오려면 그 출처에서 올바른 CORS 헤더를 포함한 응답을 반환
+* 즉 다른 서버의 리소스 사용하려면 CORS 설치해야 됨
+* CORS를 설치하지 않아서 localhost:3000의 리소스를 localhost:8080에서 못 띄움
+* 리소스가 있는 서버에 설치함 (localhost:3000)
+* 설치 후 `app.ts`에 추가
+
+```app.ts
+app.use(cors());
+```
