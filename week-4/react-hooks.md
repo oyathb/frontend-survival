@@ -21,8 +21,11 @@
 ### useEffect
 
 * 컴포넌트가 랜더링 될 때마다 특정 작업을 실행할 수 있도록 하는 Hook
+* 리액트 외부의 시스템과 동기화 가능
 * 무한루프 방지하기 위해 두 번째 매개변수로 의존성 배열 줌
-  * 한 번만 실행할 경우 빈 배열 \[]
+  * 처음 한 번만 실행할 경우 빈 배열 \[]
+
+fetch 함수를 useEffect 안에서 사용하면 좋다
 
 ```App.tsx
 const [restaurants, setRestaurants] = useState([]);
@@ -63,4 +66,47 @@ root.render(
       <App />
     </React.StrictMode>
   );
+```
+
+### useRef
+
+* Ref = Reference 참조
+* .current 프로퍼티로 전달된 인자(initialValue)로 초기화된 변경 가능한 ref 객체를 반환
+* 반환된 객체는 컴포넌트의 전 생애주기를 통해 유지
+* useState랑 무슨 차이?
+  * useState는 상태가 변경되면 본인과 하위 컴포넌트를 리랜더링 함
+  * but useRef는 current 값이 변해도 리랜더링 하지 않음. 다른 거 리랜더링 되면 그 때 한 번에 반영됨
+* 특정 DOM을 선택해야 할 때도 사용한다고 함 <- 이 부분은 나중에 찾아보자 ..
+* 글만 읽으면 좀 뭔소리야 싶은데 강의 예시 보면 잘 이해됨
+
+### Custom Hook
+
+* 재사용이 용이하게 Extract Function 하는 것
+* camelCase로 작명 (컴포넌트는 PascalCase)
+* extract한 Hook을 사용할 때 Hook의 규칙을 지켜야 함
+  * [🔗Hook의 규칙](https://ko.legacy.reactjs.org/docs/hooks-rules.html)
+  * 최상위(at the Top Level)에서만 호출. 반복문 조건문 중첩함수 X
+  * 오직 React 함수 내에서만 호출
+
+### usehooks-ts
+
+[🔗usehooks-ts](https://usehooks-ts.com/)
+
+* React Hooks을 더 간단하고 명확하게 사용할 수 있다
+* 다양한 종류가 있지만 특히 useBoolean과 useFetch가 유용해 보임
+
+useBoolean
+
+```TimerControl.tsx
+const { value: playing, toggle } = useBoolean();
+
+  const handleClick = () => {
+    toggle();
+  };
+  
+  // const [playing, setPlaying] = useState(false);
+
+  // const handleClick = () => {
+  //   setPlaying(!playing);
+  // };
 ```
