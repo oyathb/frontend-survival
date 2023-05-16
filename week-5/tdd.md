@@ -37,3 +37,19 @@ function add(x: number, y: number): number {
 테스트가 실패할 때만 프로덕션 코드를 변경해야 한다
 
 그 외에는 리팩토링으로 다듬는다
+
+#### TDD를 해야 하는 이유
+
+* "작동하는 깨끗한 코드를 작성하는 것" 이 목표
+* 수시로 작성한 코드를 검증하여 오류를 빨리 찾아낼 수 있다
+* 작성한 코드에 자신감을 가질 수 있다
+* 자유롭게 리팩토링 가능. TDD를 하면 코드 수정 결과를 외부에서 확인 안 해도 되니까 안정성이 높아지고 개발자도 코드 수정을 덜 주저하게 된다
+* 개발 및 테스팅 시간과 비용 절감
+* 소프트웨어 품질 향상
+* 나중에 테스트 작성하기 귀찮음
+
+참고
+
+[🔗https://brainhub.eu/library/test-driven-development-tdd](https://brainhub.eu/library/test-driven-development-tdd)
+
+[🔗https://hudi.blog/test-driven-development/](https://hudi.blog/test-driven-development/)
