@@ -16,4 +16,5 @@
   * [React Hooks](week-4/react-hooks.md)
 * [week 5](week-5/README.md)
   * [TDD](week-5/tdd.md)
+  * [BDD](week-5/bdd.md)
   * [Mocking, MSW, and Playwright](week-5/mocking-msw-and-playwright.md)
