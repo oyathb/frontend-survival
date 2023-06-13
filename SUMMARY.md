@@ -20,6 +20,6 @@
   * [BDD](week-5/bdd.md)
   * [Mocking, MSW, and Playwright](week-5/mocking-msw-and-playwright.md)
 * [week 7](week-7/README.md)
-  * [Page 1](week-7/page-1.md)
+  * [React Router](week-7/react-router.md)
 * [week 8](week-8/README.md)
   * [CSS in JS](week-8/css-in-js.md)
